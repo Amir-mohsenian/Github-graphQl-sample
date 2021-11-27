@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/repositories_fragment"
+        android:title="Repositories"
+        android:icon="@drawable/ic_repository"/>
+
+    <item
+        android:id="@+id/users_fragment"
+        android:title="Users"
+        android:icon="@drawable/ic_user"/>
+</menu>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="4dp">
+
+            <TextView
+                android:id="@+id/text_repo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start|center"
+                android:lines="1"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_title_size"
+                tools:text="This is a long description from a repository such as Android Navigation component" />
+
+            <ImageView
+                android:id="@+id/image_lock"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_private"
+                tools:src="@drawable/ic_private" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_repo_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:gravity="start|center"
+            android:lines="3"
+            android:paddingStart="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/text_desc_color"
+            android:textSize="@dimen/text_desc_size"
+            tools:text="This is a description This is a description This is a description This is a description This is a description This is a description This is a description This is a description This is a description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingStart="4dp">
+
+            <TextView
+                android:id="@+id/text_repo_created_at"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_detail_size"
+                android:textColor="@color/text_detail_color"
+                tools:text="Created at : 26.12.2003" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_fork" />
+
+            <TextView
+                android:id="@+id/text_fork_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:textColor="@color/text_detail_color"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                tools:text="25" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

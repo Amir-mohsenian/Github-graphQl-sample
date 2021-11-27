@@ -1,0 +1,22 @@
+query GithubRepositories($after: String) {
+    search(query: "is:public", type: REPOSITORY, first: 30, after: $after) {
+        pageInfo {
+            hasNextPage
+            endCursor
+            startCursor
+        }
+        edges {
+            node {
+                ... on Repository {
+                    id
+                    name
+                    createdAt
+                    description
+                    forkCount
+                    isPrivate
+                }
+            }
+        }
+    }
+
+}

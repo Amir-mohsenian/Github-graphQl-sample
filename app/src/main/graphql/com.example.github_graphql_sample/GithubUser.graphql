@@ -1,0 +1,22 @@
+query GithubUsers($after: String) {
+    search(query: "is:public", type: USER, first: 50, after: $after) {
+        pageInfo {
+            hasNextPage
+            endCursor
+            startCursor
+        }
+        edges {
+            node {
+                ... on User {
+                    id
+                    name
+                    email
+                    bio
+                    createdAt
+                    avatarUrl
+                }
+            }
+        }
+    }
+
+}

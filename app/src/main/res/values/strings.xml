@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Github-graphQl</string>
+    <string name="repository_created_at_title">Created at : %s</string>
+    <string name="repository_fork_count">%d</string>
+    <string name="user_created_at">%s</string>
+    <string name="date_format">Created at : %1$d.%2$d</string>
+</resources>
