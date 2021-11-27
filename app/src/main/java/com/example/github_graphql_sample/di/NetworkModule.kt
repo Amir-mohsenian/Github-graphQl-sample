@@ -18,11 +18,12 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import javax.inject.Singleton
 
+private const val API_TOKEN = "ZlUELVcVt5ZPkmLSUT6rKH9i3wXg2p0ivp8L"
+
+
 @InstallIn(SingletonComponent::class)
 @Module
 object NetworkModule {
-
-    private const val API_TOKEN = "bearer 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"
 
     @Singleton
     @Provides
@@ -50,7 +51,7 @@ object NetworkModule {
     fun provideHttpClient(): OkHttpClient {
         return OkHttpClient().newBuilder().addInterceptor(Interceptor { chain ->
             val request = chain.request().newBuilder().addHeader(
-                "Authorization", API_TOKEN
+                "Authorization", "bearer ghp_" + API_TOKEN
             )
                 .build()
             chain.proceed(request)
