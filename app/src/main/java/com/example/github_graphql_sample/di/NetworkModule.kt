@@ -22,6 +22,8 @@ import javax.inject.Singleton
 @Module
 object NetworkModule {
 
+    private const val API_TOKEN = "bearer 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"
+
     @Singleton
     @Provides
     fun provideApolloClient(
@@ -48,7 +50,7 @@ object NetworkModule {
     fun provideHttpClient(): OkHttpClient {
         return OkHttpClient().newBuilder().addInterceptor(Interceptor { chain ->
             val request = chain.request().newBuilder().addHeader(
-                "Authorization", "bearer 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"
+                "Authorization", API_TOKEN
             )
                 .build()
             chain.proceed(request)

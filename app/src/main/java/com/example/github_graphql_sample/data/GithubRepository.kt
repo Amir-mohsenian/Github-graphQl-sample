@@ -27,4 +27,5 @@ class GithubRepository(private val apolloClient: ApolloClient) {
             pagingSourceFactory = { UsersPagingSource(apolloClient) }
         ).flow
     }
+    
 }
