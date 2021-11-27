@@ -1,5 +1,5 @@
 query GithubUsers($after: String) {
-    search(query: "is:public", type: USER, first: 50, after: $after) {
+    search(query: "is:public", type: USER, first: 30, after: $after) {
         pageInfo {
             hasNextPage
             endCursor
