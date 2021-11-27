@@ -48,7 +48,7 @@ object NetworkModule {
     fun provideHttpClient(): OkHttpClient {
         return OkHttpClient().newBuilder().addInterceptor(Interceptor { chain ->
             val request = chain.request().newBuilder().addHeader(
-                "Authorization", "bearer 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"
+                "Authorization", "bearer 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"
             )
                 .build()
             chain.proceed(request)
